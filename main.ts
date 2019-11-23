@@ -860,7 +860,7 @@ namespace Sensor {
      */
     //% blockId=ir_received_left_event weight=88
     //% block="on |%btn| button pressed" shim=Sensor::onPressEvent
-    export function ir_received_left_event(btn: RemoteButton, body: () => void): void {
+    export function ir_received_left_event(btn: RemoteButton, body:Action): void {
         return
     }
 
