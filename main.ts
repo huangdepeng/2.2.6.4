@@ -862,7 +862,7 @@ namespace Sensor {
     //% block="on |%btn| button pressed" shim=Sensor::onPressEvent
     export function ir_received_left_event(btn: RemoteButton, body: () => void): void {
         return
-    };
+    }
 
     /**
      * initialises local variablesssss
@@ -871,7 +871,7 @@ namespace Sensor {
     //% block="connect ir receiver to %pin" shim=Sensor::init
     export function ir_init(pin: hicbit_Port): void { 
         return
-    };
+    }
 
 
     /**
