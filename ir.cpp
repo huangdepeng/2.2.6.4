@@ -49,12 +49,6 @@ namespace Sensor {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
 
-  //%
-  void onPressEvent(RemoteButton btn, Action body) {
-    //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    actions[btn].push_back(body);
-  }
-
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 
   void onReceivable(){
@@ -80,6 +74,12 @@ namespace Sensor {
     rx = new ReceiverIR((PinName)pin);
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
+  }
+
+  //%
+  void onPressEvent(RemoteButton btn, Action body) {
+    //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
+    actions[btn].push_back(body);
   }
 
 }
